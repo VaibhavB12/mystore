@@ -1,0 +1,22 @@
+/* adjust card width big images to small images */
+.custom-card{ 
+    width: 18rem ;
+}
+/* arrange cards side by side */
+.card-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+}
+/* adjust image height & product name & price */
+.custom-card .card-image{
+    height: 24rem;
+}
+.name-price-container{
+    display: flex;
+    justify-content: space-between;
+}
+.edit-buttons{
+    width: 46%;
+}
