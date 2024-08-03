@@ -4,6 +4,7 @@ const home = require('./routes/home');
 const bodyParser = require('body-parser');
 const addProduct = require('./routes/addProduct');
 const editProduct = require('./routes/editProduct');
+const deleteProduct = require('./routes/deleteProduct');
 // const path = require('path')
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -14,6 +15,7 @@ app.set('views', 'views');
 app.use('/', home);
 app.use('/add-product', addProduct);
 app.use('/edit-product', editProduct);
+app.use('/delete-product', deleteProduct);
 
 app.use(express.static(__dirname));
 // app.use(express.static("./assets"));

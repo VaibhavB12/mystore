@@ -73,5 +73,10 @@ exports.editProduct = (req, res) =>{
     products.editData().then(()=>{
         res.redirect('/');
     })
+}
 
+exports.deleteProduct =(req, res)=>{
+    Products.deleteProductById(req.params.id).then(()=>{
+        res.redirect('/')
+    })
 }
