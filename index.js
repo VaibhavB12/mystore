@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 const addProduct = require('./routes/addProduct');
 const editProduct = require('./routes/editProduct');
 const deleteProduct = require('./routes/deleteProduct');
+const tryCookie = require('./routes/tryCookie');
+const userAuth = require('./routes/userAuth');
 // const path = require('path')
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -16,7 +18,8 @@ app.use('/', home);
 app.use('/add-product', addProduct);
 app.use('/edit-product', editProduct);
 app.use('/delete-product', deleteProduct);
-
+app.use('/tryCookie',tryCookie);
+app.use('/', userAuth);
 app.use(express.static(__dirname));
 // app.use(express.static("./assets"));
 // app.use(express.static(path.join(__dirname, 'assets')));
