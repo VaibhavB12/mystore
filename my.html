@@ -1,140 +1,182 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <title>Bootstrap Demo</title>
-        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
-        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
-        <style>
-            footer {
-                display: grid;
-                grid-template-columns: 3fr 3fr 3fr 3fr;
-                background-color: black;
-                color: white;
-                padding: 20px;
-            }
-            section {
-                height: 300px;
-            }
-            iframe {
-                width: 100%;
-                height: 300px;
-            }
-        </style>
-    </head>
-    <body class="container-fluid">
-        <header class="mt-1">
-            <div class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container-fluid">
-                    <button data-bs-toggle="collapse" data-bs-target="#menu"  class="navbar-toggler">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <h2 class="navbar-brand">Amazon</h2>
-                    <div class="navbar-collapse collapse" id="menu">
-                        <ul class="navbar-nav nav">
-                            <li class="nav-item"><a target="framebody"  href="home.html" class="nav-link">Home</a></li>
-                            <li class="nav-item"><a target="framebody" href="electronics.html" class="nav-link">Electronics</a></li>
-                            <li class="nav-item"><a target="framebody"  href="footwear.html" class="nav-link">Footwear</a></li>
-                            <li class="nav-item"><a  target="framebody" href="fashion.html" class="nav-link">Fashion</a></li>
-                            <li class="nav-item">
-                                <div class="dropdown">
-                                    <button data-bs-toggle="dropdown" class="btn btn-dark dropdown-toggle">
-                                        Select a Category
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-dark">
-                                        <div class="dropdown-item">
-                                            <a target="framebody" href="electronics.html"><span class="dropdown-item-text">Electronics</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+  <head>
+    <title>Bootstrap Demo</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <style>
+      footer {
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr 3fr;
+        background-color: black;
+        color: white;
+        padding: 20px;
+      }
+      section {
+        height: 300px;
+      }
+      iframe {
+        width: 100%;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body class="container-fluid">
+    <header class="mt-1">
+      <div class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <button
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+            class="navbar-toggler"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <h2 class="navbar-brand">Amazon</h2>
+          <div class="navbar-collapse collapse" id="menu">
+            <ul class="navbar-nav nav">
+              <li class="nav-item">
+                <a target="framebody" href="home.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a target="framebody" href="electronics.html" class="nav-link"
+                  >Electronics</a
+                >
+              </li>
+              <li class="nav-item">
+                <a target="framebody" href="footwear.html" class="nav-link"
+                  >Footwear</a
+                >
+              </li>
+              <li class="nav-item">
+                <a target="framebody" href="fashion.html" class="nav-link"
+                  >Fashion</a
+                >
+              </li>
+              <li class="nav-item">
+                <div class="dropdown">
+                  <button
+                    data-bs-toggle="dropdown"
+                    class="btn btn-dark dropdown-toggle"
+                  >
+                    Select a Category
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-dark">
+                    <div class="dropdown-item">
+                      <a target="framebody" href="electronics.html"
+                        ><span class="dropdown-item-text">Electronics</span></a
+                      >
                     </div>
+                  </div>
                 </div>
-            </div>
-        </header>
-        <div>
-            <div class="carousel slide carousel-dark" id="banner" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="3000">
-                        <img src="../public/images/slide1.PNG" class="w-100 d-block">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="5000">
-                      <div class="text-center d-block w-100">
-                        <img src="../public/images/slide2.PNG" class="w-100 d-block">
-                      </div>
-                    </div>
-                    <div class="carousel-item" data-bs-interval="5000">
-                        <img src="../public/images/slide3.PNG" class="w-100 d-block">
-                    </div>
-                </div>
-                <div>
-                    <button data-bs-target="#banner" data-bs-slide="prev" class="carousel-control-prev btn btn-dark ">
-                        <span class="carousel-control-prev-icon"></span>
-                    </button>
-                    <button data-bs-target="#banner" data-bs-slide="next" class="carousel-control-next">
-                        <span class="carousel-control-next-icon"></span>
-                    </button>
-                </div>
-                <div class="carousel-indicators">
-                     <button class="active" data-bs-slide-to="0" data-bs-target="#banner"></button>
-                     <button data-bs-slide-to="1" data-bs-target="#banner"></button>
-                     <button data-bs-slide-to="2" data-bs-target="#banner"></button>
-                </div>
-            </div>
+              </li>
+            </ul>
+          </div>
         </div>
-        <section>
-            <iframe src="home.html" name="framebody">
-
-            </iframe>
-        </section>
-        <footer>
-            <div>
-                <h4>Get to Know Us</h4>
-                <ul class="list-unstyled">
-                   <li> About Us</li>
-                   <li>Careers</li>
-                   <li>Press Releases</li>
-                   <li>Amazon Cares</li>
-                   <li>Gift a Smile</li>
-                   <li>Amazon Science</li>
-                </ul>
-
+      </div>
+    </header>
+    <div>
+      <div
+        class="carousel slide carousel-dark"
+        id="banner"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3000">
+            <img src="../public/images/slide1.PNG" class="w-100 d-block" />
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <div class="text-center d-block w-100">
+              <img src="../public/images/slide2.PNG" class="w-100 d-block" />
             </div>
-            <div>
-                <h4>Get to Know Us</h4>
-                <ul class="list-unstyled">
-                   <li> About Us</li>
-                   <li>Careers</li>
-                   <li>Press Releases</li>
-                   <li>Amazon Cares</li>
-                   <li>Gift a Smile</li>
-                   <li>Amazon Science</li>
-                </ul>  
-            </div>
-            <div>
-                <h4>Get to Know Us</h4>
-                <ul class="list-unstyled">
-                   <li> About Us</li>
-                   <li>Careers</li>
-                   <li>Press Releases</li>
-                   <li>Amazon Cares</li>
-                   <li>Gift a Smile</li>
-                   <li>Amazon Science</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Get to Know Us</h4>
-                <ul class="list-unstyled">
-                   <li> About Us</li>
-                   <li>Careers</li>
-                   <li>Press Releases</li>
-                   <li>Amazon Cares</li>
-                   <li>Gift a Smile</li>
-                   <li>Amazon Science</li>
-                </ul>
-            </div>
-        </footer>
-        <script src="../node_modules/jquery/dist/jquery.js"></script>
-        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    </body>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="../public/images/slide3.PNG" class="w-100 d-block" />
+          </div>
+        </div>
+        <div>
+          <button
+            data-bs-target="#banner"
+            data-bs-slide="prev"
+            class="carousel-control-prev btn btn-dark"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button
+            data-bs-target="#banner"
+            data-bs-slide="next"
+            class="carousel-control-next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+        <div class="carousel-indicators">
+          <button
+            class="active"
+            data-bs-slide-to="0"
+            data-bs-target="#banner"
+          ></button>
+          <button data-bs-slide-to="1" data-bs-target="#banner"></button>
+          <button data-bs-slide-to="2" data-bs-target="#banner"></button>
+        </div>
+      </div>
+    </div>
+    <section>
+      <iframe src="home.html" name="framebody"> </iframe>
+    </section>
+    <footer>
+      <div>
+        <h4>Get to Know Us</h4>
+        <ul class="list-unstyled">
+          <li>About Us</li>
+          <li>Careers</li>
+          <li>Press Releases</li>
+          <li>Amazon Cares</li>
+          <li>Gift a Smile</li>
+          <li>Amazon Science</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get to Know Us</h4>
+        <ul class="list-unstyled">
+          <li>About Us</li>
+          <li>Careers</li>
+          <li>Press Releases</li>
+          <li>Amazon Cares</li>
+          <li>Gift a Smile</li>
+          <li>Amazon Science</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get to Know Us</h4>
+        <ul class="list-unstyled">
+          <li>About Us</li>
+          <li>Careers</li>
+          <li>Press Releases</li>
+          <li>Amazon Cares</li>
+          <li>Gift a Smile</li>
+          <li>Amazon Science</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get to Know Us</h4>
+        <ul class="list-unstyled">
+          <li>About Us</li>
+          <li>Careers</li>
+          <li>Press Releases</li>
+          <li>Amazon Cares</li>
+          <li>Gift a Smile</li>
+          <li>Amazon Science</li>
+        </ul>
+      </div>
+    </footer>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
 </html>

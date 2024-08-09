@@ -12,9 +12,14 @@
   "description": "",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
+    "express-session": "^1.18.0",
     "mysql2": "^3.11.0",
     "nodemon": "^3.1.4"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3"
   }
 }

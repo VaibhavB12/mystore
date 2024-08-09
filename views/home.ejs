@@ -10,7 +10,7 @@
     <title>Home</title>
 </head>
 <body>
-    <%- include('./includes/navbar.ejs')%>
+    <%- include('./includes/navbar.ejs'), {isLoggedIn:isLoggedIn} %>
     <div>
         <div class="pt-3 card-container">
             <% if(products.length > 0) { %>
@@ -22,18 +22,20 @@
                                 <h3 class="card-title"> <%= product.productname %> </h3>
                                 <h4 class="card-title fw-light"> <%= product.price %> </h4>
                             </div>
-                            <div>
-                                <a href="/edit-product/<%= product.id %>" class="btn btn-outline-dark mx-1 mt-4 edit-buttons">
-                                    <i class="bi bi-pencil-fill"></i>
-                                </a>
-                                <a href="/delete-product/<%= product.id %>" class="btn btn-outline-dark mx-1 mt-4 edit-buttons">
-                                    <i class="bi bi-trash-fill"></i>
-                                </a>
+                            <% if (isLoggedIn==="true") { %>
+                                <div>
+                                    <a href="/edit-product/<%= product.id %>" class="btn btn-outline-dark mx-1 mt-4 edit-buttons">
+                                        <i class="bi bi-pencil-fill"></i>
+                                    </a>
+                                    <a href="/delete-product/<%= product.id %>" class="btn btn-outline-dark mx-1 mt-4 edit-buttons">
+                                        <i class="bi bi-trash-fill"></i>
+                                    </a>
+                                </div>
+                            <% } %>
                             </div>
                         </div>
-                    </div>
-                <% } %>
-            <% } else { %>
+                    <% } %>
+                <% } else { %>
                 <div class="m-5 p-5">
                     <h1>No Products Available</h1>
                     <a href="/add-product" class="btn btn-outline-dark fs-4 my-3"> Add Product </a>
