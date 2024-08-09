@@ -36,26 +36,41 @@ const Products = require("../models/products");
 exports.renderProducts = (req, res) => {
   // res.send('Welcome to home route')
   // const cookie = req.get("Cookie").split(';')[0].split('=')[1]; // use cookie-parser middleware instead
-  const cookie = req.cookies;
+  // const cookie = req.cookies;
+  const cookie = req.session.isLoggedIn;
   console.log(cookie); // isLoggedIn=invalidUsername
 
   Products.fetchProduct().then(([rows, fieldData]) => {
     // console.log(rows);
     // console.log(fieldData);
-    res.render("home", { products:rows, isLoggedIn:cookie.isLoggedIn });
+    res.render("home", { 
+      products:rows, 
+      // isLoggedIn:cookie.isLoggedIn,
+      isLoggedIn:cookie 
+    });
   });
   // res.render("home", {products: products})
 };
 
 exports.renderAddProduct = (req, res) => {
-  res.render("add-product", { isLoggedIn: req.cookies.isLoggedIn });
+  const cookie = req.session.isLoggedIn;
+  res.render("add-product", 
+    { 
+      // isLoggedIn: req.cookies.isLoggedIn,
+      isLoggedIn: req.cookie
+    });
 };
 
 exports.renderEditProducts = (req, res) => {
+  const cookie = req.session.isLoggedIn;
   Products.fetchProductById(req.params.id).then(
     ([[productData], fieldData]) => {
       // console.log(productData);
-      res.render("edit-product", { product: productData, isLoggedIn: req.cookies.isLoggedIn });
+      res.render("edit-product", { 
+        product: productData, 
+        // isLoggedIn: req.cookies.isLoggedIn, 
+        isLoggedIn: req.cookie
+      });
     },
   );
   // res.render("edit-product", { product: products[--req.params.id]})
